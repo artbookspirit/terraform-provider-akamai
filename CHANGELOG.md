@@ -4,7 +4,7 @@
 
 #### FEATURES/ENHANCEMENTS:
 
-* Appsec
+* AppsecX
   * Fixed a problem with the missing `security_policy_id` during update if a resource was imported previously. 
   * Added the `akamai_appsec_aap_selected_hostnames` resource and data source.
   * Modified the `enable_botman_siem` field from `Required` to the `Optional` parameter in the `akamai_appsec_siem_settings` resource.
