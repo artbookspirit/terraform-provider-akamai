@@ -1,5 +1,93 @@
 # RELEASE NOTES
 
+## X.X.X (X X, X)
+
+#### BREAKING CHANGES:
+
+Hello
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### FEATURES/ENHANCEMENTS:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ * Modified build scripts to use Go `1.22.9`. ([I#578](https://github.com/akamai/terraform-provider-akamai/issues/578))
+
+
+
+
+
+
+
+
+
+* PAPI
+  * Added support for moving PAPI property between groups (`akamai_property` and `akamai_property_bootstrap`)
+    by updating the `group_id` field. Currently, properties that have never been activated are not supported.
+  * Added `asset_id` schema field to `akamai_property_bootstrap`.
+
+
+#### BUG FIXES:
+
+
+
+
+
+* PAPI
+    * Fixed improper resolution of `include_id` attribute in `include_activation` resource in the case of referencing to the
+      `include` resource and replacement of both resources.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 6.6.0 (Nov 21, 2024)
 
 #### FEATURES/ENHANCEMENTS:
@@ -7,7 +95,7 @@
 * Appsec
   * Fixed a problem with the missing `security_policy_id` during update if a resource was imported previously. 
   * Added the `akamai_appsec_aap_selected_hostnames` resource and data source.
-  * Modified the `enable_botman_siem` field from `Required` to the `Optional` parameter in the `akamai_appsec_siem_settings` resource.
+  * Modified the `enable_botman_siem` field from `Required` to the `Optional` parameter in the`akamai_appsec_siem_settings` resource.
 
 * Cloud Access
   * Added functionality to import the `akamai_cloudaccess_key` resource for specified group and contract IDs.
@@ -24,6 +112,7 @@
 
 * PAPI
   * Added support for the new rule format `v2024-10-21`.
+
 
 #### BUG FIXES:
 
